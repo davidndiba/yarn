@@ -1,21 +1,37 @@
-import { Link, Outlet } from 'umi';
+
+import React from 'react';
 import styles from './index.less';
 
-export default function Layout() {
+const BasicLayout: React.FC = (props) => {
   return (
-    <div className={styles.navs}>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/docs">Docs</Link>
-        </li>
-        <li>
-          <a href="https://github.com/umijs/umi">Github</a>
-        </li>
-      </ul>
-      <Outlet />
+    <div className={styles.container}>
+      {/* Sidebar */}
+      <div className={styles.sidebar}>
+        {/* Sidebar Content Here */}
+      </div>
+
+      {/* Page Content */}
+      <div className={styles.content}>
+        {/* Navbar */}
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          {/* Navbar Content Here */}
+        </nav>
+
+        {/* Main Content */}
+        <div className={styles.mainContent}>
+          {/* Search Input */}
+          <div className={styles.searchContainer}>
+            <input type="text" id="searchInput" placeholder="Search..." />
+          </div>
+
+          {/* Cards and Tables */}
+          <div className={styles.cardsTablesContainer}>
+            {props.children}
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default BasicLayout;
