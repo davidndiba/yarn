@@ -8,28 +8,48 @@
     margin-right: 1em;
   }
 }
-/* src/layouts/index.less */
 .container {
   display: flex;
+  width: 100%;
 }
-
 .sidebar {
-  /* Sidebar Styles Here */
+ padding: 60px;
+ display: flex;
+ height: 120px;
+ padding: 40px;
+ flex-direction: column;
+ justify-content: center;
+ gap: 10px;
+ flex-shrink: 0;
+ align-self: stretch;
+ background-color: #FFFFFF;
+ width: 200px;
+}
+.menu{
+  color: #0593B8;
 }
 
 .content {
-  margin-left: 250px; /* Adjust based on your sidebar width */
-  flex: 1;
-}
+  margin-left: 0px;
+  background-color: #FFFFFF;
 
+}
 .mainContent {
   padding: 20px;
 }
-
 .searchContainer {
   margin-bottom: 20px;
 }
-
-.cardsTablesContainer {
-  /* Additional styling for your cards and tables container */
+// .cardsTablesContainer {
+//   /* Additional styling for your cards and tables container */
+// }
+.nav{
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #A1A1A1;
+  display: flex;
 }
